@@ -7,26 +7,24 @@ public class AnalysisResult implements Serializable {
 
     private String dataName;
     private String content;
+    private int wordCount;
 
-    public AnalysisResult(String dataName, String content) {
+    public AnalysisResult(String dataName, String content, int wordCount) {
         this.dataName = dataName;
         this.content = content;
+        this.wordCount = wordCount;
     }
 
     public String getDataName() {
         return dataName;
     }
 
-    public void setDataName(String dataName) {
-        this.dataName = dataName;
-    }
-
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public int getWordCount() {
+        return wordCount;
     }
 
     @Override
@@ -34,6 +32,7 @@ public class AnalysisResult implements Serializable {
         return "AnalysisResult{" +
                 "dataName='" + dataName + '\'' +
                 ", content='" + content + '\'' +
+                ", wordCount=" + wordCount +
                 '}';
     }
 }
